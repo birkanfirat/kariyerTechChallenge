@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Presenter.LoginActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding5"
+        android:gravity="center"
+        android:text="@string/marketting"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/textSize6">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/padding5"
+        android:layout_marginEnd="@dimen/padding5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded">
+
+            <ImageView
+                android:id="@+id/imageUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/user"
+                android:tint="@color/colorSoftGrey">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/username"
+                style="@style/AppTheme.Edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageUser"
+                android:hint="@string/username"
+                android:padding="@dimen/padding2"
+                android:text="kariyer"
+                android:background="@null"
+                android:textSize="@dimen/textSize3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding2"
+            android:background="@drawable/edittext_rounded">
+
+            <ImageView
+                android:id="@+id/imagePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/password"
+                android:tint="@color/colorSoftGrey">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password"
+                style="@style/AppTheme.Edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imagePassword"
+                android:background="@null"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/padding2"
+                android:text="2019ADev"
+                android:textSize="@dimen/textSize3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginBottom="@dimen/padding2"
+            android:paddingTop="@dimen/padding2"
+            android:paddingBottom="@dimen/padding2">
+
+            <Switch
+                android:id="@+id/switchRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/switchStyle">
+
+            </Switch>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_toRightOf="@id/switchRememberMe"
+                android:gravity="center_vertical"
+                android:text="@string/rememberMe"
+                android:textSize="@dimen/textSize3">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginBottom="@dimen/padding2">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded"
+                android:text="@string/login"
+                android:textColor="@color/colorWhite">
+
+            </Button>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
