@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.kariyertechchallenge.Model.Session
+import com.example.kariyertechchallenge.Presenter.Helper.PrefenceConnect
 import com.example.kariyertechchallenge.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -34,6 +36,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun goToMarketting(){
+        if(switchRememberMe.isChecked){
+            val session = Session()
+            session.userName = username.text.toString()
+            session.userPassword = password.text.toString()
+
+            PrefenceConnect.writeDataToInternal("session", session,this)
+        }
         val i = Intent(this, MarketListActivity::class.java)
         this.startActivity(i)
 

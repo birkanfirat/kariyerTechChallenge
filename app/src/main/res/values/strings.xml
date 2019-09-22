@@ -5,4 +5,5 @@
     <string name="rememberMe">Beni Hatırla</string>
     <string name="login">Giriş</string>
     <string name="marketting">MARKETİM</string>
+    <string name="itemMoney">%.2fTL</string>
 </resources>

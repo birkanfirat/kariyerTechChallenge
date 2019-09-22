@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lnrDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="19"
+            android:layout_marginLeft="@dimen/padding1"
+            android:layout_marginRight="@dimen/padding1"
+            android:textSize="@dimen/textSize6">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/mont"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Ekim"
+            android:layout_marginLeft="@dimen/padding1"
+            android:layout_marginRight="@dimen/padding1"
+            android:textSize="@dimen/textSize4">
+
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:layout_toEndOf="@+id/lnrDate"
+        android:background="@color/colorGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding2"
+        android:layout_marginRight="@dimen/padding2"
+        android:layout_toRightOf="@+id/view"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding2"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginRight="@dimen/padding2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/marketName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Market 1"
+                android:textSize="@dimen/textSize3"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:src="@drawable/forward_button"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding2"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginRight="@dimen/padding2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/itemName"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Şampuan 250 "
+                android:textSize="@dimen/textSize3">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/itemMoney"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="15TL"
+                android:gravity="right"
+                android:textSize="@dimen/textSize3"
+                android:textStyle="bold">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding2"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginRight="@dimen/padding2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/statusIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/itemcolorsquare"></ImageView>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding5"
+                android:text="Hazırlanıyor"
+                android:textSize="@dimen/textSize3"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

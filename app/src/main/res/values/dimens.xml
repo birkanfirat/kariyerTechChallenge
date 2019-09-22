@@ -7,5 +7,6 @@
 
 
     <dimen name="textSize3">16sp</dimen>
+    <dimen name="textSize4">20sp</dimen>
     <dimen name="textSize6">44sp</dimen>
 </resources>
