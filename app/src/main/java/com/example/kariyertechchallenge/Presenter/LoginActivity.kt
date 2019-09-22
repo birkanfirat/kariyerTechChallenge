@@ -21,11 +21,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun controller(){
-
+        //Username passwrod boş kontrolü
         if(username.text.isNullOrEmpty() || password.text.isNullOrEmpty()){
             Toast.makeText(this,"Kullanıcı Adı veya Şifre Boş Olamaz",Toast.LENGTH_LONG).show()
             return
         }
+        //Kullanıcı adı şifre doğruluğu kontrolü
         if(username.text.toString() !="kariyer" || password.text.toString()!="2019ADev"){
             Toast.makeText(this,"Kullanıcı Adı veya Şifre Yanlış",Toast.LENGTH_LONG).show()
             return
@@ -36,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun goToMarketting(){
+        //Swicht checkedsa session olarak bilgileri yazıyoruz.
         if(switchRememberMe.isChecked){
             val session = Session()
             session.userName = username.text.toString()
@@ -43,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
 
             PrefenceConnect.writeDataToInternal("session", session,this)
         }
+        //Siparişlerim sayfasına yönlendirme.
         val i = Intent(this, MarketListActivity::class.java)
         this.startActivity(i)
 

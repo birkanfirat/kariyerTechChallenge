@@ -16,9 +16,10 @@ class SessionControlActivity : AppCompatActivity() {
 
 
         try {
+            //Giriş yapıldığında session okunuyor kontrole göre yönlendirmeler yapılıyor.
             val session = PrefenceConnect.readDataToInternal("session",this) as Session
             if (!session.userName.isNullOrEmpty() || !session.userPassword.isNullOrEmpty()) {
-                //Force Update için çağırıyoruz.
+
                 val i = Intent(this, MarketListActivity::class.java)
                 this.startActivity(i)
                 finish()

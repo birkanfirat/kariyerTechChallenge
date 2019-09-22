@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiClient {
 
-
+    //Retrofit Call
     companion object Factory {
         private var retrofit: Retrofit? = null
         private val Base_Url = "http://kariyertechchallenge.mockable.io"
