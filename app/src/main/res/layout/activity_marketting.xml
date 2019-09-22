@@ -1,19 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Presenter.MarketListActivity">
 
-    <ExpandableListView
-        android:id="@+id/markettingListView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:divider="@null"
-        android:visibility="visible"
-        android:groupIndicator="@null"
-        android:childDivider="@color/colorGrey"/>
+        android:layout_above="@+id/bottomLayout">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/colorSoftRed">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding2"
+                android:gravity="bottom|center"
+                android:text="@string/marketting"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSize3">
+
+            </TextView>
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/markettingListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutNavBar"
+            android:childDivider="@color/colorGrey"
+            android:divider="@null"
+            android:groupIndicator="@null"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/padding2"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded_orange"
+            android:text="Siparişlerim"
+            android:id="@+id/btnOrder"
+            android:layout_marginRight="@dimen/padding2"
+            android:layout_weight="1"
+            android:textColor="@color/colorRed">
+
+        </Button>
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/padding2"
+            android:background="@drawable/button_rounded"
+            android:text="Çıkış Yap"
+            android:textColor="@color/colorWhite">
+
+        </Button>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

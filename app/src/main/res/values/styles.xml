@@ -14,7 +14,13 @@
         <item name="colorAccent">@color/colorWhite</item>
         <item name="android:windowLightStatusBar">true</item>
 
+    </style>
 
+    <style name="AppTheme.Orange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorGrey</item>
+        <item name="colorPrimaryDark">@color/colorSoftRed</item>
+        <item name="colorAccent">@color/colorSoftRed</item>
+        <item name="android:windowLightStatusBar">true</item>
 
     </style>
     <style name="switchStyle" >
