@@ -28,9 +28,9 @@ class MarketListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marketting)
-
+        //interface initialize
         apiInterface = ApiClient.getClient().create(ApiInterface::class.java)
-
+        //adapter initialize
         adapter = MarketListAdapter(this, markettingList)
 
         markettingListView.setAdapter(adapter)
@@ -39,6 +39,7 @@ class MarketListActivity : AppCompatActivity() {
 
 
         btnLogOut.setOnClickListener {
+            //Çıkış butonuna tıklandığında çağırılır.
             closeApp()
         }
 
@@ -50,7 +51,7 @@ class MarketListActivity : AppCompatActivity() {
     }
 
     fun init() {
-
+        //Service Call
         val getMarketing = apiInterface.getMarketingList(Constants.BASE_URL)
         getMarketing.enqueue(object : Callback<List<MarketingModel>> {
 
@@ -62,6 +63,7 @@ class MarketListActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<MarketingModel>>, response: Response<List<MarketingModel>>) {
                 Log.d("",response.body().toString())
                 if(!response.body().isNullOrEmpty()) {
+                    //Dönen responsu adaptera setledik.
                     adapter.markettingList = response.body()!!
                     adapter.notifyDataSetChanged()
                 }
@@ -82,7 +84,9 @@ class MarketListActivity : AppCompatActivity() {
         builder.setTitle("Çıkış")
             .setMessage("Çıkış yapmak istiyor musunuz?")
             .setPositiveButton("İstiyorum") { dialog, which ->
+                //Çıkış yapıldığında session'ı siliyoruz
                 PrefenceConnect.deleteDataToInternal("session",this)
+                //Tüm aktivitileri bitiriyoruz.
                finishAffinity()
 
             }

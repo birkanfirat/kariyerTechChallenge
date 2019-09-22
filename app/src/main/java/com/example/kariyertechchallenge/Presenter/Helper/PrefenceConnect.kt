@@ -4,6 +4,7 @@ import android.content.Context
 import java.io.*
 
 object PrefenceConnect {
+    //Yazılan datanın okunması
     fun readDataToInternal(fileName: String, context: Context): Any? {
         try {
             val fis = context.openFileInput(fileName)
@@ -18,7 +19,7 @@ object PrefenceConnect {
 
         return null
     }
-
+    //Yazılan datanın silinmesi
     fun deleteDataToInternal(fileName: String, context: Context): Boolean {
         try {
             //String path = getFilesDir().getAbsolutePath() + "/" + fileName;
@@ -30,7 +31,7 @@ object PrefenceConnect {
 
         return false
     }
-
+    //Local'e data yazma işlemini gerçekleştirir.
     fun writeDataToInternal(fileName: String, obj: Any,context: Context) {
         /*  try {
               val fos = App.getContext()?.openFileOutput(fileName, Context.MODE_PRIVATE)

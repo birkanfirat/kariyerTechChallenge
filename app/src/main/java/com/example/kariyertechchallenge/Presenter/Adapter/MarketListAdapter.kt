@@ -45,16 +45,20 @@ class MarketListAdapter(context: Context, list: List<MarketingModel>) :
         }
         else
             cnvrtView = convertView
-
+        //Listede ki row setledik.
         var rowItem = markettingList[groupPosition]
 
+        //Row'daki itemler yerleştirildi.
         cnvrtView!!.marketName.text = rowItem.marketName
         cnvrtView.itemName.text = rowItem.orderName
+        //Float olduğundan .2f kullandık.
         cnvrtView.itemMoney.text =  String.format(ctnx.getString(R.string.itemMoney), rowItem.productPrice)
         cnvrtView.status.text = rowItem.productState
         cnvrtView.date.text = rowItem.date
 
+        //Ay değeri setlendi düzenlendi.
         setMont(cnvrtView,rowItem.month)
+        //Status durumuna göre icon ve text renklendirildi.
         setStatusIcon(cnvrtView, rowItem,ctnx)
 
 
@@ -106,6 +110,7 @@ class MarketListAdapter(context: Context, list: List<MarketingModel>) :
         return markettingList.size
     }
 
+    //Ay değeri setlendi düzenlendi.
     private fun setMont(cnvrtView: View, month: String) {
 
         when(month){
@@ -160,6 +165,7 @@ class MarketListAdapter(context: Context, list: List<MarketingModel>) :
         }
     }
 
+    //Status durumuna göre icon ve text renklendirildi.
     private fun setStatusIcon(
         cnvrtView: View,
         rowItem: MarketingModel,
